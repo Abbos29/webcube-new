@@ -2,10 +2,10 @@
   padding: 150px 0 160px;
 
   @media (max-width: $breakpoint992) {
-    padding: 80px 0 100px;
+    padding: 80px 0 0px;
   }
   @media (max-width: $breakpoint480) {
-    padding: 60px 0 0p;
+    padding: 60px 0 0px;
   }
   // .team__title
   &__title {

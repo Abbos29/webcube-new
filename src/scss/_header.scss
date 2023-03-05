@@ -3,6 +3,7 @@
 .header {
   background: url(../img/header/bg-texture.jpg) no-repeat center;
   background-size: cover;
+
 }
 
 .star {
@@ -43,15 +44,30 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 15px;
+  max-width: ($containerWidth + $containerPadding) + px;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: hsla(0, 0%, 0%, 0.9);
 }
 
 .logo {
-  a {
-    color: white;
-    height: 32px;
-  }
+    a {
+        color: white;
+
+        img {
+
+            @media (max-width: $breakpoint480) {
+                height: 32px;
+            }
+        }
+    }
 }
 
 .menu {
@@ -298,7 +314,7 @@ nav {
   }
   .start-btn {
     position: fixed;
-    z-index: 11;
+    z-index: 2;
     right: 70px;
     bottom: 64px;
     color: #000;

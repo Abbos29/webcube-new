@@ -22,11 +22,14 @@
   &__title {
     max-width: 580px;
     @media (max-width: $breakpoint992) {
-      max-width: 280px;
+      max-width: 480px;
       margin-bottom: 24px;
     }
   }
 
+  .swiper {
+    padding-bottom: 40px;
+  }
   // .testimolials__content
   &__content {
     width: 700px;

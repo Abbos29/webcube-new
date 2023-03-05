@@ -50,6 +50,7 @@ const swiper = new Swiper(".swiper", {
   // direction: 'vertical',
   slidesPerView: 1,
   spaceBetween: 50,
+  autoHeight: true,
   loop: true,
   grabCursor: true,
 
@@ -64,7 +65,7 @@ const swiper = new Swiper(".swiper", {
     320: {
       // autoHeight: true,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
 
       pagination: {
         el: ".swiper-pagination",

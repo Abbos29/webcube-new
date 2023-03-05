@@ -43,6 +43,35 @@
     width: 100%;
     margin-bottom: 40px;
   }
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+    
+    .form__title-1 {
+        font-weight: 700;
+        font-size: clamp(1.375rem, 0.117rem + 6.29vw, 6.25rem);
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .form__title-line {
+        height: 2px;
+        max-width: 90%;
+        width: 100%;
+        background: $green;
+    }
+    .form__title-2 {
+        font-weight: 700;
+        font-size: clamp(1.625rem, 0.431rem + 5.97vw, 6.25rem);
+        color : #fff;
+    }
+  }
   &__title {
     font-weight: 700;
     font-size: 120px;

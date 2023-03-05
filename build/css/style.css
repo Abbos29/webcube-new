@@ -146,13 +146,20 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .logo a {
   color: white;
-  height: 32px;
 }
 
 .menu {
@@ -264,7 +271,7 @@ nav {
 
 .header .start-btn {
   position: fixed;
-  z-index: 11;
+  z-index: 2;
   right: 70px;
   bottom: 64px;
   color: #000;
@@ -340,7 +347,6 @@ nav {
 
 .portfolio {
   padding-top: 150px;
-  padding-bottom: 150px;
 }
 
 .portfolio .container {
@@ -545,6 +551,10 @@ nav {
 
 .testimolials__title {
   max-width: 580px;
+}
+
+.testimolials .swiper {
+  padding-bottom: 40px;
 }
 
 .testimolials__content {
@@ -879,15 +889,12 @@ nav {
 .contacts__wrapper {
   position: relative;
   margin-top: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .contacts__content {
@@ -976,6 +983,11 @@ nav {
   background-size: cover;
 }
 
+.contacts__img {
+  max-width: 100%;
+  width: 100%;
+}
+
 .item__1 {
   background: -o-linear-gradient(45deg, #1769ff 0%, #213fca 100%);
   background: linear-gradient(45deg, #1769ff 0%, #213fca 100%);
@@ -1053,6 +1065,49 @@ nav {
   max-width: 100%;
   width: 100%;
   margin-bottom: 40px;
+}
+
+.form__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+.form__titles .form__title-1 {
+  font-weight: 700;
+  font-size: clamp(1.375rem, 0.117rem + 6.29vw, 6.25rem);
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__titles .form__title-line {
+  height: 2px;
+  max-width: 90%;
+  width: 100%;
+  background: #c6ff00;
+}
+
+.form__titles .form__title-2 {
+  font-weight: 700;
+  font-size: clamp(1.625rem, 0.431rem + 5.97vw, 6.25rem);
+  color: #fff;
 }
 
 .form__title {
@@ -2199,10 +2254,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1449.98px) {
-  .container {
-    max-width: 1300px;
-  }
-
   .menu {
     gap: 30px;
   }
@@ -2240,6 +2291,10 @@ button.swiper-pagination-bullet {
     height: 400px;
   }
 
+  .contacts__wrapper {
+    margin-top: 30px;
+  }
+
   .contacts__followus {
     display: none;
   }
@@ -2256,10 +2311,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1023.98px) {
-  .container {
-    max-width: 970px;
-  }
-
   .star {
     display: none;
   }
@@ -2358,7 +2409,7 @@ button.swiper-pagination-bullet {
   }
 
   .testimolials__title {
-    max-width: 280px;
+    max-width: 480px;
     margin-bottom: 24px;
   }
 
@@ -2417,7 +2468,7 @@ button.swiper-pagination-bullet {
   }
 
   .team {
-    padding: 80px 0 100px;
+    padding: 80px 0 0px;
   }
 
   .team__title {
@@ -2439,8 +2490,7 @@ button.swiper-pagination-bullet {
   }
 
   .contacts__wrapper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    margin-top: 80px;
   }
 
   .contacts__text {
@@ -2577,10 +2627,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 767.98px) {
-  .container {
-    max-width: 740px;
-  }
-
   .header__content::before {
     display: none;
   }
@@ -2610,7 +2656,7 @@ button.swiper-pagination-bullet {
   }
 
   .contacts__wrapper {
-    padding: 50px 40px;
+    grid-template-columns: 1fr;
     margin-top: 90px;
   }
 
@@ -2676,8 +2722,8 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 479.98px) {
-  .container {
-    max-width: none;
+  .logo a img {
+    height: 32px;
   }
 
   .header__title {
@@ -2780,7 +2826,7 @@ button.swiper-pagination-bullet {
   }
 
   .team {
-    padding: 60px 0 0p;
+    padding: 60px 0 0px;
   }
 
   .team__title {
@@ -2813,8 +2859,7 @@ button.swiper-pagination-bullet {
   }
 
   .contacts__wrapper {
-    padding: 50px 20px 50px;
-    margin-top: 0;
+    margin-top: 70px;
   }
 
   .contacts__text {
@@ -2827,10 +2872,6 @@ button.swiper-pagination-bullet {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-
-  .contacts__img {
-    display: none;
   }
 
   .form {
