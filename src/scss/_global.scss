@@ -1,0 +1,77 @@
+// Html
+html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background: #0D0C0F;
+    color: #fff;
+}
+
+// SCROLL BAR
+
+// /* width */
+// ::-webkit-scrollbar {
+//     width: 10px;
+
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: #0D0C0F; 
+
+// }
+ 
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: #888;
+//     border-radius: 99px;
+    
+//     &:hover {
+//         background: #555; 
+//     }
+// }
+
+
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1300px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+
+// Body Locked
+body {
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

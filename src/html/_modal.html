@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal__wrapper">
+    <div class="overlay"></div>
+    <div class="modal" id="modal">
+        <div class="modal__close"> <img src="./img/close.svg" alt="cancel"></div>
+        <div class="modal__title">design service</div>
+        <div class="modal__desc">To get started, we need to talk. It is enough to tell about your project, indicate contacts, and we will contact you to discuss everything.</div>
+        <div class="modal__body">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="modal__body-title-number">1</div>
+                <div class="modal__body-title">Select type project</div>
+                <div class="modal__wrapper-tags">
+                    <div data-id="web" class="modal__tag">Landing</div>
+                    <div data-id="web" class="modal__tag">Website</div>
+                    <div data-id="web" class="modal__tag">E-commece</div>
+                    <div data-id="app" class="modal__tag">Mobile App</div>
+                    <div data-id="dashboard" class="modal__tag">Dashboard</div>
+                    <div data-id="logo" class="modal__tag">Logo or Branding</div>
+                    <div data-id="advert" class="modal__tag">Advert</div>
+                    <div data-id="other" class="modal__tag">Other</div>
+                </div>
+                <div class="modal__form">
+                    <div class="modal__body-title-number">2</div>
+                    <div class="modal__body-title">Leave a request</div>
+                    <label class="modal__form-label" for="clientName">
+                        <input id="clientName" name="name" type="text" placeholder="Name" required autocomplete="off">
+                    </label>
+
+                    <label class="modal__form-label" for="clientContact">
+                        <input id="clientContact" name="name" type="text" placeholder="Mail or any messenger" required autocomplete="off">
+                    </label>
+
+                    <label class="modal__form-label" for="clientMessage">
+                        <textarea id="clientMessage" name="about" required="" class="als-expressform-textarea" style="overflow: hidden; overflow-wrap: break-word; height: 58px;" placeholder="A few words about the project and approximate budget"></textarea>
+                    </label>
+                </div>
+                <div class="modal__form-submit">
+                    <button type="submit" class="form__btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+/*
+TODO 1) Переделать контейнер
+TODO 2) Исрпавить баг с командой в планшете и меньше
+TODO 3) Исрпавить баг с dots в слайдере с отзывами
+TODO 3) На мобилке сделать фиксированную шапку
+
+TODO Переделать секцию с контакнтами (не очень важно)
+*/
+// Global SCSS-files imports
+@import "./reset";
+@import "./vars";
+@import "./global";
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+@import "./about";
+@import "./portfolio";
+@import "./reviews";
+@import "./testimolials";
+@import "./team";
+// @import "./products";
+@import "./contacts";
+@import "./form";
+@import "./footer";
+@import "./modal";
+
+// Libs
+@import "./libs/swiper";

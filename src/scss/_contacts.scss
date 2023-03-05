@@ -1,0 +1,166 @@
+.contacts {
+  // .contacts__wrapper
+  &__wrapper {
+    position: relative;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $breakpoint992) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $breakpoint768) {
+      padding: 50px 40px;
+      margin-top: 90px;
+    }
+    @media (max-width: $breakpoint480) {
+      padding: 50px 20px 50px;
+      margin-top: 0;
+    }
+  }
+  // .contacts__content
+  &__content {
+    max-width: 685px;
+    width: 100%;
+  }
+  // .contacts__text
+  &__text {
+    font-size: 32px;
+    line-height: 117%;
+    letter-spacing: -0.03em;
+    padding: 24px 0 40px;
+    color: #898a8e;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 24px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 16px;
+      padding: 16px 0 32px;
+    }
+  }
+  // .contacts__socials
+  &__socials {
+    display: flex;
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  // .contacts__inner
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin-right: 70px;
+
+    @media (max-width: $breakpoint480) {
+      margin-right: 0;
+      justify-content: flex-start;
+    }
+  }
+  // .contacts__item
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(120%);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  // .contacts__followus
+  &__followus {
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    line-height: 117%;
+    color: $green;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 219px;
+      height: 73px;
+      background-image: url(../img/contacts/Star.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: $breakpoint1450) {
+      display: none;
+    }
+  }
+  // .contacts__img
+  &__img {
+    // position: absolute;
+    // top: -32px;
+    // right: 80px;
+    // max-width: 100%;
+    // height: 100%;
+    @media (max-width: $breakpoint992) {
+      margin: 0;
+    }
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+}
+
+.item {
+  // .item__1
+  &__1 {
+    background: linear-gradient(45deg, #1769ff 0%, #213fca 100%);
+    box-shadow: 0px 4px 30px rgba(27, 86, 231, 0.5);
+  }
+  // .item__2
+  &__2 {
+    background: linear-gradient(45deg, #1da1f2 0%, #0e71c8 100%);
+    box-shadow: 0px 4px 30px rgba(27, 86, 231, 0.5);
+  }
+  // .item__3
+  &__3 {
+    background: linear-gradient(
+      45deg,
+      #405de6 0%,
+      #5851db 15.62%,
+      #833ab4 32.29%,
+      #c13584 52.08%,
+      #e1306c 72.4%,
+      #fd1d1d 100%
+    );
+    box-shadow: 0px 4px 30px rgba(225, 48, 108, 0.5);
+  }
+  // .item__4
+  &__4 {
+    background: linear-gradient(45deg, #d5135a 0%, #f05924 100%);
+    box-shadow: 0px 4px 30px rgba(213, 19, 90, 0.5);
+  }
+  // .item__5
+  &__5 {
+    background: linear-gradient(45deg, #333333 0%, #626b73 100%);
+    box-shadow: 0px 4px 30px rgba(51, 51, 51, 0.5);
+  }
+  // .item__6
+  &__6 {
+    background: linear-gradient(45deg, #821a1a 0%, #ff0000 100%);
+    box-shadow: 0px 4px 30px rgba(210, 9, 12, 0.5);
+  }
+}
+
+.contacts__title {
+  max-width: 540px;
+}
