@@ -70,7 +70,7 @@
   &__arrows {
     display: flex;
     position: relative;
-    z-index: 10;
+    z-index: 2;
 
     @media (max-width: $breakpoint480) {
       display: none;

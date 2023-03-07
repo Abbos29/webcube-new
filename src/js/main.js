@@ -1,5 +1,8 @@
 // Custom scripts
 
+// Scroll animation
+AOS.init();
+
 /*
 TODO 1) Фиксированная кнопка до секции social networks
 TODO 2) После 1 экрана при скролле вверх показывать шапку сайта
@@ -79,7 +82,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Открытие попапа для фиксированной кнопки
+// // Открытие попапа для фиксированной кнопки
 // function popupOpen() {
 //   const popup = document.querySelector(".modal");
 //   const popupClose = document.querySelector(".modal__close");
@@ -99,7 +102,7 @@ const swiper = new Swiper(".swiper", {
 // }
 // popupOpen();
 
-// Модальное окно заказа
+// // Модальное окно заказа
 
 // const modalBtn = document.getElementById("modal-btn");
 // const modal = document.getElementById("modal");
@@ -135,30 +138,31 @@ const swiper = new Swiper(".swiper", {
 //   });
 // });
 
-// // Фиксированная кнопка на мобилке
-// if (matchMedia("screen and (max-width: 1023px)").matches) {
-//   $(window).scroll(function () {
-//     var offset = $("#student-offset").offset();
-//     var welcomeArea = $(".information").offset();
+// Фиксированная кнопка на мобилке
+if (matchMedia("screen and (max-width: 1023px)").matches) {
+  $(window).scroll(function () {
+    var offset = $("#student-offset").offset();
+    var welcomeArea = $(".information").offset();
 
-//     if (
-//       $(this).scrollTop() > offset.top ||
-//       $(this).scrollTop() <= welcomeArea.top
-//     ) {
-//       // console.log("hidden");
-//       $(".button_fixed").css({
-//         visibility: "hidden",
-//         opacity: "0",
-//       });
-//     } else {
-//       // console.log("visible");
-//       $(".button_fixed").css({
-//         visibility: "visible",
-//         opacity: "1",
-//       });
-//     }
-//   });
-// }
+    if (
+      $(this).scrollTop() > offset.top ||
+      $(this).scrollTop() <= welcomeArea.top
+    ) {
+      // console.log("hidden");
+      $(".button_fixed").css({
+        visibility: "hidden",
+        opacity: "0",
+      });
+    } else {
+      // console.log("visible");
+      $(".button_fixed").css({
+        visibility: "visible",
+        opacity: "1",
+      });
+    }
+  });
+}
+
 
 // Header fixed
 
@@ -195,3 +199,7 @@ headerToggle &&
     header.classList.toggle(headerOpenedClass);
     e.target.classList.toggle(headerToggleActiveClass);
   });
+
+
+
+// Убрать кнопку .start-btn когда доскроллил до секции .form
